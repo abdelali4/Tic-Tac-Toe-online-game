@@ -1,0 +1,7 @@
+@font-face{
+    font-family:ensa;
+    src:url("../assets/fonts/Titillium.ttf");
+}
+*{
+    font-family:ensa;
+}

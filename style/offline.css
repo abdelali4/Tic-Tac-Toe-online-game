@@ -1,0 +1,119 @@
+#modes{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+.mode{
+    padding: 40px;
+    background-color: #77b6fe79;
+    border-radius: 20px;
+    z-index: 3;
+    margin: 40px;
+    transform:translateX(calc(100vw));
+    transition:transform 0.25s ease-in-out;
+    cursor:pointer;
+}
+.mode:hover{
+    transform:translateY(-50px) !important;
+}
+.mode_image{
+    width: 220px;
+}
+.opponent_image{
+    width: 220px;
+}
+#window{
+    box-sizing: border-box;
+    margin: 0;
+    display: grid;  
+    cursor: pointer;
+    transform:translateX(100vw);
+    transition:transform 0.5s ease-in;
+}
+#play_again{
+    overflow: hidden;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    background-color: #77b6fef3;
+    position:absolute;
+    z-index: 5;
+    font-size: 30px;
+    color: white;
+    font-weight:bolder;
+    padding:20px 40px;
+    border-radius: 5px;
+    margin: 10px;
+    transform:scale(0);
+    transition:transform 0.25s ease-in;
+}
+#container{
+    display: flex;
+    margin-top:10px;
+    flex-wrap:wrap;
+    align-items: center;
+    justify-content: center;
+}
+#player_name{
+    color: black;
+}
+#play_again_text{
+    text-align:center;
+}
+.button{
+    cursor:pointer;
+    margin: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: 1px solid white;
+}
+.button::before{
+    border-radius:5px !important;
+}
+.square{
+    margin: 0;
+    box-sizing: border-box;
+    display:flex;
+    height:100px;
+    width:100px;
+    align-items: center;
+    justify-content:center;
+    border: 8px solid white;
+    border-right:none;
+    border-top: none;
+}
+.left{
+    border-left:none;
+}
+.bottom{
+    border-bottom:none;
+}
+.winner_square{
+    animation:winner_square 0.5s linear infinite;
+}
+@media screen and (max-width:760px){
+    .mode:hover{
+        transform:translateX(+40px) !important;
+    }
+}
+@media screen and (max-width:500px){
+    #play_again{
+        font-size: 25px;
+    }
+    .button{
+        font-size: 18px;
+        margin: 5px;
+    }
+}
+@keyframes winner_square{
+    0%{
+        background-color: transparent;
+    }
+    50%{
+        background-color: black;
+    }
+    100%{
+        background-color: transparent;
+    }
+}

@@ -1,0 +1,19 @@
+#loading{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 10px solid black;
+    position:absolute;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    
+}
+#loading::before{
+    content:'';
+    position: absolute;
+    background-color: red;
+
+}

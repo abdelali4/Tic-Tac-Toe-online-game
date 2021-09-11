@@ -1,0 +1,37 @@
+
+:root{
+    --mode-color:#77b6fe79;
+}
+#play_now{
+    text-decoration:none;
+    position: absolute;
+    color:white;
+    font-size: 30px;
+    font-weight:bolder;
+    padding: 5px 30px;
+    border: 2px solid white;
+    z-index: 9;
+    cursor:pointer;
+}
+
+#container{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+.mode{
+    background-color:var(--mode-color);
+    text-decoration:none;
+    font-size: 40px;
+    color: white;
+    font-weight:bolder;
+    padding:20px 80px;
+    border-radius:10px;
+    margin: 40px;
+    transform:translateX(100vw);
+    transition:transform 0.25s ease-in-out;
+    cursor:pointer;
+}
+.mode:hover{
+    transform:translateY(-50px) !important;
+}

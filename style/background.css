@@ -1,0 +1,50 @@
+@font-face{
+    font-family:ensa;
+    src:url('../assets/fonts/Titillium.ttf');
+}
+*{
+    font-family:ensa;
+}
+body{
+    margin:0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    overflow: hidden;
+}
+#background{
+    animation:background_animation 5s linear infinite;
+    position: absolute;
+    display: flex;
+    background-image: url("../assets/images/background.png");
+    background-size:cover;
+    background-position: center;
+    animation:background_animation  5s linear infinite;
+    inset: 0;
+    z-index: -1;
+}
+.button_hover{
+    position:relative;
+}
+.button_hover::before{
+    content:"";
+    position:absolute;
+    top: 0;left: 0;right: 0;bottom:0;
+    background-color: black;
+    z-index:-1;
+    transition:transform 0.2s ease;
+    transform:scaleX(0);
+}
+.button_hover:hover:before{
+    transform:scaleX(1);
+}
+@keyframes background_animation{
+    0%{
+        filter:hue-rotate(0deg);
+    }
+    100%{
+        filter:hue-rotate(360deg);
+    }
+}
+
